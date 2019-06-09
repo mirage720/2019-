@@ -1,0 +1,19 @@
+a = input().split()
+b = input().split()
+print(a)
+
+## dic 형태로 스플릿
+r = dict()
+for i in a:
+    for j in range(0,len(i)-1,2) :
+            r[i[j]] = int(i[j+1])
+
+p = dict()
+for i in b: 
+    for j in range(0,len(i)-1,2) :
+        if i[j] not in p :
+            p[i[j]] = int(i[j+1])
+        else :
+            p[i[j]] += int(i[j+1])
+print(r)
+print(p)
